@@ -1,8 +1,11 @@
+import sys
 from game import Game
-from board import Board
-size = (9, 9)
-prob = 0.5
-board = Board(size, prob)
-screenSize = (800, 800)
-game = Game(board, screenSize)
-game.run()
+
+def main():
+    size = int(sys.argv[1]), int(sys.argv[2])
+    prob = float(sys.argv[3])
+    g = Game(size, prob)
+    g.run()
+
+if __name__ == '__main__':
+    main()
